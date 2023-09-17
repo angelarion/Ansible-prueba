@@ -1,6 +1,6 @@
 ---
-- name: Apache server installed
-  hosts: localhost
-  become: yes
+# Primer ejemplo de Playbook en Ansible
+- hosts: localhost
   tasks:
-
+  - name: Hacer ping
+    ping:
