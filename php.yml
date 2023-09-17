@@ -1,40 +1,9 @@
 ---
-- hosts: localhost
-  vars:
-  ansible_python_interpreter: /usr/bin/python3
+- name: Apache server installed
+  hosts: node1
   become: yes
   tasks:
-  - debug:
-      var: ansible_python_interpreter
-  tasks:
-    - name: Instalación instalar software-propiedades-comunes
-      apt: name=software-properties-common
-
-    - name: "Repo PHP 7.4"
-      apt_repository:
-        repo="ppa:ondrej/php"
-   
-    - name: "Updating the repo"
-      apt: update_cache=yes
-
-    - name: Installation PHP 7.4
-      apt: name=php7.4 state=present
-
-    - name: install lamp stack
-      apt:
-        pkg:
-          - php7.4-mysql
-          - php7.4-curl
-          - php7.4-json
-          - php7.4-cgi
-          - php7.4-xsl
-          - php7.4-cgi
-          - php7.4-gd
-          - php7.4-mbstring
-          - php7.4-zip
-          - php7.4-xmlrpc
-          - php7.4-soap
-          - php7.4-intl
-          - libapache2-mod-php
-        state: present
-        update_cache: yes 
+  - name: latest Apache version installed
+    yum:
+      name: httpd
+      state: latest
