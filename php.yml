@@ -1,17 +1,10 @@
 ---
 # Primer ejemplo de Playbook en Ansible
-- hosts: localhost
+- hosts: node1
   tasks:
   - name: Hacer ping
     ping:
   - name: Mostrar info
     debug:
       msg: "Machine name :{{ansible_hostname}}"
-  - name: Instalar NGINX
-    yum:
-      name: nginx
-      state: latest 
-  - name: Iniciar Servicio
-    service:
-      name: nginx
-      state: started
+ 
