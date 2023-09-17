@@ -1,6 +1,6 @@
 ---
 # Primer ejemplo de Playbook en Ansible
-- hosts: all
+- hosts: node1
   tasks:
   - name: Hacer ping
     ping:
