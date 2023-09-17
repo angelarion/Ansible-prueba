@@ -4,3 +4,6 @@
   tasks:
   - name: Hacer ping
     ping:
+  - name: Mostrar info
+    debug:
+      msg: "Machine name :{{ansible_hostname}}"
