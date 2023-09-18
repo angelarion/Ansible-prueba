@@ -3,7 +3,6 @@
 - hosts: localhost
   tasks:
   - name: Hacer ping
-    become: true
     ping:
   - name: Mostrar info
     debug:
