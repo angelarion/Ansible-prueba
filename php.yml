@@ -6,4 +6,4 @@
     ping:
 - name: Print Hello, Word!
           debug:
-          msg: "Hola Mundo"
+            msg: "Hola Mundo"
