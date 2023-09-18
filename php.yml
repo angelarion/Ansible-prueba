@@ -4,6 +4,3 @@
   tasks:
   - name: Hacer ping
     ping:
-- name: Print Hello, Word!
-          debug:
-            msg: "Hola Mundo"
