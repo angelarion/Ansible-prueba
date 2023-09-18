@@ -1,6 +1,22 @@
----
-# Primer ejemplo de Playbook en Ansible
 - hosts: localhost
   tasks:
-  - name: Hacer ping
-    ping:
+    - ping: ~
+    - name: Update APT package manager repositories cache
+      become: true
+      apt:
+        update_cache: yes
+    - name: Upgrade installed packages
+      become: true
+      apt:
+        upgrade: safe
+    - name: Install cowsay - it's probably important
+      become: true
+      apt:
+        name: cowsay
+    - name: Install Git VCS
+      become: true
+      apt:
+        name: git
+        state: latest
+    - name: Add PHP 7 PPA repository
+      become: tru
