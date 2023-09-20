@@ -3,5 +3,5 @@
   vars_files:
      - variables.yml
   tasks:
-    - debug: msg="Username: {{username}}"
-    - debug: msg="Nombre completo: {{fullname}}"
+    - debug: msg="Username {{username}}"
+    - debug: msg="Nombre completo {{fullname}}"
