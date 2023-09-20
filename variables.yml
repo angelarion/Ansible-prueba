@@ -1,7 +1,19 @@
 ---
-- hosts: localhost
-  vars_files:
-     - variables.yml
+
+- name: Blockinfile to edit files
+  gather_facts: false
+  hosts: localhost
   tasks:
-    - debug: msg="Username {{username}}"
-    - debug: msg="Nombre completo {{fullname}}"
+    - name: "Agregamos grupo de nodos en la ruta  /etc/ansible/hosts"
+      blockinfile:
+        name: /etc/ansible/hosts
+        block: |
+          # Manager
+          100.0.1.7 srvweb-1
+
+          # Managed-1
+          20.0.1.11 srvweb-2
+
+          # Managed-2
+          20.0.1.4 srvweb-3
+        marker: "# {mark} Grupos de nodos "
