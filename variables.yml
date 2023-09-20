@@ -3,9 +3,5 @@
   vars_files:
      - variables.yml
   tasks:
-    - name: show info
-      debug:
-        msg: "Nombre de pc : {{ansible_hostname}}"
-  tasks:
     - debug: msg="Username: {{username}}"
     - debug: msg="Nombre completo: {{fullname}}"
