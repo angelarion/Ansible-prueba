@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  tasks:
+    - name: show info
+      debug:
+        msg: "Nombre de pc : {{ansible_hostname}}"
