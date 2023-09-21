@@ -1,1 +1,6 @@
-
+---
+- hosts: localhost
+  tasks:
+    - name: show info
+      debug:
+        msg: "Fecha: {{ansible_date_time.date}}"
