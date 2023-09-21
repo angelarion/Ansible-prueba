@@ -9,7 +9,7 @@
         name: /etc/ansible/hosts
         block: |
           # Manager
-          {{ manager.ip }} {{ manager.name }} 
+          { manager.ip } { manager.name } 
 
           # Managed-1
           {{ managed_1.ip }} {{ managed_1.name }} 
