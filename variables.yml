@@ -1,7 +1,0 @@
----
-- hosts: localhost
-  vars_files:
-     - variables.yml
-  tasks:
-    - debug: msg="Nombre de usuario {{username}}"
-    - debug: msg="Nombre completo {{fullname}}"

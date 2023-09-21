@@ -1,0 +1,12 @@
+---
+- name: Template to customize files
+  gather_facts: false
+  hosts: localhost
+  tasks:
+    - name: "Creating customized sample-template.txt in /home/ubuntu/sample-template.txt"
+      template: >
+        src=/root/origen/origen-template.txt
+        dest=/root/destino/origen-template.txt
+        owner=root
+        group=root
+        mode=0644
