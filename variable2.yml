@@ -1,0 +1,19 @@
+---
+
+- name: Blockinfile to edit files
+  gather_facts: false
+  hosts: localhost
+  tasks:
+    - name: "Agregar manager y managed en nodos /etc/hosts"
+      blockinfile:
+        name: /etc/hosts
+        block: |
+          # Manager
+          {{ manager.ip }} {{ manager.name }} 
+
+          # Managed-1
+          {{ managed_1.ip }} {{ managed_1.name }} 
+
+          # Managed-2
+          {{ managed_2.ip }} {{ managed_2.name }} 
+        marker: "# {mark} Agregar Managed y managed en host"
