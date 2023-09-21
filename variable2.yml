@@ -8,7 +8,7 @@
   tasks:
     - name: "Agregar manager y managed en nodos /etc/hosts"
       blockinfile:
-        name: /etc/ansible/hosts
+        name: /root/etc/ansible/hosts
         block: |
           # Manager
           {{ manager.ip }} {{ manager.name }} 
