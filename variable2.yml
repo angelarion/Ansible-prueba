@@ -3,6 +3,8 @@
 - name: Blockinfile to edit files
   gather_facts: false
   hosts: localhost
+  vars_files:
+     - variables.yml
   tasks:
     - name: "Agregar manager y managed en nodos /etc/hosts"
       blockinfile:
