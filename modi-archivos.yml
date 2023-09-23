@@ -1,6 +1,6 @@
 ---
 - name: Blockinfile to edit files
-  gather_facts: yes
+  gather_facts: false
   hosts: localhost
   tasks:
     - name: "Agregamos grupo de nodos en la ruta  /etc/ansible/hosts"
