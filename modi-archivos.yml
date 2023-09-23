@@ -5,7 +5,7 @@
   tasks:
     - name: "Agregamos grupo de nodos en la ruta  /etc/ansible/hosts"
       blockinfile:
-        name: /root/etc/ansible/hosts
+        name: /root/origen/hosts1
         block: |
           # Manager
           100.0.1.7 srvweb-1
