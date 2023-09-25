@@ -5,7 +5,6 @@
   tasks:
     - name: "Agregamos grupo de nodos en la ruta  /etc/ansible/hosts"
       blockinfile:
-        become: yes
         name: /etc/ansible/hosts
         block: |
           # Manager
