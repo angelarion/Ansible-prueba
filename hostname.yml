@@ -3,7 +3,7 @@
   vars_files:
      - variables.yml
   tasks:
-    - name: Mostrar Info
+    - name: Mostrar Informacion
       debug:
         msg: "Nombre de pc : {{ansible_hostname}}"
   tasks:
