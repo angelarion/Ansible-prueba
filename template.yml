@@ -3,7 +3,7 @@
   gather_facts: false
   hosts: 192.168.24.53
   tasks:
-    - name: "Creating customized sample-template.txt in /home/ubuntu/sample-template.txt"
+    - name: "Creacion de origen-template.txt "
       template: >
         src=/origen/origen-template.txt
         dest=/destino/origen-template.txt
