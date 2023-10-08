@@ -9,4 +9,7 @@
   tasks:
     - debug: msg="Username {{ username }}"
     - debug: msg="Nombre completo {{ fullname }}"
+    - name: Mostrar Informacion
+      debug:
+        msg: "Nombre de pc : {{ansible_hostname}}"
 
